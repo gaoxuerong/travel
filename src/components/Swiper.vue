@@ -5,11 +5,12 @@
        <img  class="swiper-img" :src="item.imgUrl" />
     </swiper-slide>
     <div class="swiper-pagination"  slot="pagination"></div>
+    <div class="swiper-scrollbar"   slot="scrollbar"></div>
   </swiper>
   </div>
 </template>
 <script>
-import Vue from 'vue'
+import Vue from "vue";
 export default {
   name: "HomeSwiper",
   data() {
@@ -18,14 +19,18 @@ export default {
         pagination: ".swiper-pagination",
         loop: true
       },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'http://pic.c-ctrip.com/htlpic/flagship/store/accor/bgindex.jpg'
-      },
-      {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/p/p60/1809/f4/d19e9608d2d1a002.jpg_256x160_539f2e86.jpg'
-      }]
+      swiperList: [
+        {
+          id: "0001",
+          imgUrl:
+            "http://pic.c-ctrip.com/htlpic/flagship/store/accor/bgindex.jpg"
+        },
+        {
+          id: "0002",
+          imgUrl:
+            "https://imgs.qunarzz.com/p/p60/1809/f4/d19e9608d2d1a002.jpg_256x160_539f2e86.jpg"
+        }
+      ]
     };
   }
 };
