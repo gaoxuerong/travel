@@ -38,6 +38,7 @@ export default {
       background #fff
       border-radius .1rem
       color: #ccc
+      text-align center
     .header-right
       width 1.04rem
       padding 0 .1rem

@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
+import Vue from "vue"
 export default {
   name: "HomeIcons",
   data() {
@@ -105,35 +105,36 @@ export default {
     padding-bottom: 50%;  
     display: flex;
     flex-flow: row wrap;
-  .icon {
-    position: relative;
-    width: 25%;
-    padding-bottom: 25%;
+  .icons
+    margin-top .1rem
+    .icon {
+      text-align center
+      position: relative
+      width: 25%
+      padding-bottom: 25%
+      .icon-img {
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0.44rem
+        padding: 0.1rem
 
-    .icon-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0.44rem;
-      padding: 0.1rem;
-
-      .icon-img-item {
-        height: 100%;
+        .icon-img-item {
+          height: 100%
+        }
       }
-    }
-
-    .icon-desc {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 0.44rem;
-      line-height: 0.44rem;
-      text-align: center;
-      color: $darkTextColor;
-      ellipsis()
-    }
+      .icon-desc {
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: 0.44rem
+        line-height: 0.44rem
+        text-align: center
+        color: $darkTextColor
+        ellipsis()
+      }
   }
 </style>
 
