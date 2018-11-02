@@ -1,19 +1,50 @@
 <template>
   <ul class="alphabet">
-    <li class="alphabet-item">A</li>
-    <li class="alphabet-item">A</li>
-    <li class="alphabet-item">A</li>
-    <li class="alphabet-item">A</li>
-    <li class="alphabet-item">A</li>
-    <li class="alphabet-item">A</li>
-    <li class="alphabet-item">A</li>
-    <li class="alphabet-item">A</li>
-    <li class="alphabet-item">A</li>
+    <li
+      class="alphabet-item"
+      v-for="(item, key) of cities"
+      :key="key"
+    >
+      {{key}}
+    </li>
   </ul>
 </template>
 <script> 
 export default {
-  name: 'CityAlphabet'
+  name: 'CityAlphabet',
+  data () {
+    return {
+      
+    }
+  },
+  props: {
+    cities: Object
+  },
+  computed: {
+    letters () {
+      const letters = []
+      for(let i of this.cities) {
+        letters.push(i)
+      }
+      return letters
+    }
+  },
+
+  methods: {
+    handleTouchStart () {
+      
+    },
+    handleTouchMove () {
+      
+    },
+    handleTouchEnd () {
+      
+    },
+    handleLetterClick () {
+      
+    }
+    
+  }
 }
 </script>
 <style lang="stylus" scoped>
