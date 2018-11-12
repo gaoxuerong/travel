@@ -17,7 +17,7 @@
         >
           {{item.name}}
         </li>
-        <li class="search-item border-bottom">
+        <li class="search-item border-bottom" v-show="hasNoData">
           没有找到匹配数据
         </li>
       </ul>
@@ -25,6 +25,7 @@
   </div>
 </template>
 <script>
+import BScroll from 'better-scroll'
 export default {
   name: 'CitySearch',
   props: {
@@ -35,6 +36,37 @@ export default {
       keyword: '',
       list: [],
       timer: null
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      this.changeCity(city)
+      this.$router.push('/')
+    },
+  },
+  watch: {
+    keyword () {
+      
+      this.timer = setTimeout(() => {
+        const result = []
+        for(let i in this.cities){
+          console.log('i:')
+          this.cities[i].forEach(value => {
+            if(value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
+              result.push(value)
+            }
+          });
+        }
+        this.list = result
+      },100)
+    }
+  },
+  mounted () {
+    let scroll = new BScroll(this.$refs.search)
+  },
+  computed: {
+    hasNoData () {
+      return !this.list.length
     }
   }
 }
