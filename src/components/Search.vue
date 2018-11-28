@@ -39,10 +39,11 @@ export default {
     }
   },
   methods: {
-    handleCityClick (city) {
-      this.changeCity(city)
+    handleCityClick (cityname) {
+      // alert(cityname)
+      this.$store.commit('handlecityname',cityname)
       this.$router.push('/')
-    },
+    }
   },
   watch: {
     keyword () {
